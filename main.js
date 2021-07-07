@@ -1,19 +1,38 @@
-var img = [];
-var i = 0;
-var number = 0;
-var closeButton = [];
+var imageHe = [];
+var iHe = 0;
+var numberHe = 0;
+var closeButtonHe = [];
+
+var imageHe3 = [];
+var iHe3 = 0;
+var numberHe3 = 0;
+var closeButtonHe3 = [];
 
 function setup()
 {
   createCanvas(windowWidth, windowHeight);
 
-  inputValue = createInput();
-  inputValue.size(60);
-  inputValue.position(30,30);
+  textSize(15);
+  text("和和聯合日捐紀錄", 23, 21);
 
-  showImageButton = createButton("顯示圖片");
-  showImageButton.mouseClicked(showImage);
-  showImageButton.position(110, 30);
+  inputValueHe = createInput();
+  inputValueHe.size(90);
+  inputValueHe.position(30,40);
+
+  showImageButtonHe = createButton("顯示圖片");
+  showImageButtonHe.mouseClicked(showImageHe);
+  showImageButtonHe.position(30, 70);
+
+  textSize(15);
+  text("和和3館日捐紀錄", 883, 21);
+
+  inputValueHe3 = createInput();
+  inputValueHe3.size(90);
+  inputValueHe3.position(890,40);
+
+  showImageButtonHe3 = createButton("顯示圖片");
+  showImageButtonHe3.mouseClicked(showImageHe3);
+  showImageButtonHe3.position(890, 70);
 
   createP("");
 }
@@ -23,42 +42,82 @@ function draw()
 
 }
 
-function showImage()
+function showImageHe()
 {
-  i = inputValue.value();
+  iHe = inputValueHe.value();
 
-  img[number] = createImg("https://raw.githubusercontent.com/Celine10811020/show.image/main/"+ i +".png", "image not found");
-  img[number].position(30, 60 + 510*number);
+  imageHe[numberHe] = createImg("https://raw.githubusercontent.com/Celine10811020/walkr/main/hehe/"+ iHe +".jpg", "image not found");
+  imageHe[numberHe].position(30, 100 + 810*numberHe);
 
-  closeButton[number] = createButton("X", number);
-  closeButton[number].mouseClicked(closeImage);
-  closeButton[number].position(530, 540 + 510*number);
+  closeButtonHe[numberHe] = createButton("X", numberHe);
+  closeButtonHe[numberHe].mouseClicked(closeImageHe);
+  closeButtonHe[numberHe].position(830, 880 + 810*numberHe);
 
-  inputValue.value("");
+  inputValueHe.value("");
 
-  number++;
+  numberHe++;
 };
 
-function closeImage()
+function closeImageHe()
 {
   this.hide();
   var temp = this.value();
-  img[temp].hide();
+  imageHe[temp].hide();
 
-  var tmp = number-temp;
+  var tmp = numberHe-temp;
 
   for(var j=1; j<tmp; j++)
   {
     temp++;
-    img[temp].position(30, 60 + 510*(temp-1));
-    img[temp-1] = img[temp];
-    closeButton[temp].position(530, 540 + 510*(temp-1));
-    closeButton[temp-1] = closeButton[temp];
-    closeButton[temp].value(temp-1);
+    imageHe[temp].position(30, 100 + 810*(temp-1));
+    imageHe[temp-1] = imageHe[temp];
+    closeButtonHe[temp].position(830, 880 + 810*(temp-1));
+    closeButtonHe[temp-1] = closeButtonHe[temp];
+    closeButtonHe[temp].value(temp-1);
   }
 
-  if(number > 0)
+  if(numberHe > 0)
   {
-      number--;
+      numberHe--;
+  }
+}
+
+function showImageHe3()
+{
+  iHe3 = inputValueHe3.value();
+
+  imageHe3[numberHe3] = createImg("https://raw.githubusercontent.com/Celine10811020/walkr/main/hehe3/"+ iHe3 +".jpg", "image not found");
+  imageHe3[numberHe3].position(890, 100 + 810*numberHe3);
+
+  closeButtonHe3[numberHe3] = createButton("X", numberHe3);
+  closeButtonHe3[numberHe3].mouseClicked(closeImageHe3);
+  closeButtonHe3[numberHe3].position(1690, 880 + 810*numberHe3);
+
+  inputValueHe3.value("");
+
+  numberHe3++;
+};
+
+function closeImageHe3()
+{
+  this.hide();
+  var temp = this.value();
+  imageHe3[temp].hide();
+
+  var tmp = numberHe3-temp;
+
+  for(var j=1; j<tmp; j++)
+  {
+    temp++;
+    imageHe3[temp].position(890, 100 + 810*(temp-1));
+    imageHe3[temp-1] = imageHe3[temp];
+    closeButtonHe3[temp].position(1690, 880 + 810*(temp-1));
+    closeButtonHe3[temp-1] = closeButtonHe3[temp];
+    closeButtonHe3[temp].value(temp-1);
+  }
+
+  if(numberHe3 > 0)
+  {
+      numberHe3--;
   }
 }
