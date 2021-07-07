@@ -24,15 +24,15 @@ function setup()
   showImageButtonHe.position(30, 70);
 
   textSize(15);
-  text("和和3館日捐紀錄", 883, 21);
+  text("和和3館日捐紀錄", 853, 21);
 
   inputValueHe3 = createInput();
   inputValueHe3.size(90);
-  inputValueHe3.position(890,40);
+  inputValueHe3.position(860,40);
 
   showImageButtonHe3 = createButton("顯示圖片");
   showImageButtonHe3.mouseClicked(showImageHe3);
-  showImageButtonHe3.position(890, 70);
+  showImageButtonHe3.position(860, 70);
 
   createP("");
 }
@@ -47,11 +47,11 @@ function showImageHe()
   iHe = inputValueHe.value();
 
   imageHe[numberHe] = createImg("https://raw.githubusercontent.com/Celine10811020/walkr/main/hehe/"+ iHe +".jpg", "image not found");
-  imageHe[numberHe].position(30, 100 + 810*numberHe);
+  imageHe[numberHe].position(30, 100 + 760*numberHe);
 
   closeButtonHe[numberHe] = createButton("X", numberHe);
   closeButtonHe[numberHe].mouseClicked(closeImageHe);
-  closeButtonHe[numberHe].position(830, 880 + 810*numberHe);
+  closeButtonHe[numberHe].position(780, 830 + 760*numberHe);
 
   inputValueHe.value("");
 
@@ -69,9 +69,9 @@ function closeImageHe()
   for(var j=1; j<tmp; j++)
   {
     temp++;
-    imageHe[temp].position(30, 100 + 810*(temp-1));
+    imageHe[temp].position(30, 100 + 760*(temp-1));
     imageHe[temp-1] = imageHe[temp];
-    closeButtonHe[temp].position(830, 880 + 810*(temp-1));
+    closeButtonHe[temp].position(780, 830 + 810*(temp-1));
     closeButtonHe[temp-1] = closeButtonHe[temp];
     closeButtonHe[temp].value(temp-1);
   }
@@ -87,11 +87,11 @@ function showImageHe3()
   iHe3 = inputValueHe3.value();
 
   imageHe3[numberHe3] = createImg("https://raw.githubusercontent.com/Celine10811020/walkr/main/hehe3/"+ iHe3 +".jpg", "image not found");
-  imageHe3[numberHe3].position(890, 100 + 810*numberHe3);
+  imageHe3[numberHe3].position(860, 100 + 760*numberHe3);
 
   closeButtonHe3[numberHe3] = createButton("X", numberHe3);
   closeButtonHe3[numberHe3].mouseClicked(closeImageHe3);
-  closeButtonHe3[numberHe3].position(1690, 880 + 810*numberHe3);
+  closeButtonHe3[numberHe3].position(1610, 830 + 760*numberHe3);
 
   inputValueHe3.value("");
 
@@ -109,9 +109,9 @@ function closeImageHe3()
   for(var j=1; j<tmp; j++)
   {
     temp++;
-    imageHe3[temp].position(890, 100 + 810*(temp-1));
+    imageHe3[temp].position(860, 100 + 760*(temp-1));
     imageHe3[temp-1] = imageHe3[temp];
-    closeButtonHe3[temp].position(1690, 880 + 810*(temp-1));
+    closeButtonHe3[temp].position(1610, 830 + 760*(temp-1));
     closeButtonHe3[temp-1] = closeButtonHe3[temp];
     closeButtonHe3[temp].value(temp-1);
   }
