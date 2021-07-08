@@ -46,7 +46,7 @@ function showImageHe()
 {
   iHe = inputValueHe.value();
 
-  imageHe[numberHe] = createImg("https://raw.githubusercontent.com/Celine10811020/walkr/main/hehe/"+ iHe +".jpg", "image not found");
+  imageHe[numberHe] = createImg("https://raw.githubusercontent.com/Celine10811020/walkr/main/hoho/"+ iHe +".jpg", "image not found");
   imageHe[numberHe].position(30, 100 + 760*numberHe);
 
   closeButtonHe[numberHe] = createButton("X", numberHe);
@@ -86,7 +86,7 @@ function showImageHe3()
 {
   iHe3 = inputValueHe3.value();
 
-  imageHe3[numberHe3] = createImg("https://raw.githubusercontent.com/Celine10811020/walkr/main/hehe3/"+ iHe3 +".jpg", "image not found");
+  imageHe3[numberHe3] = createImg("https://raw.githubusercontent.com/Celine10811020/walkr/main/hoho3/"+ iHe3 +".jpg", "image not found");
   imageHe3[numberHe3].position(860, 100 + 760*numberHe3);
 
   closeButtonHe3[numberHe3] = createButton("X", numberHe3);
