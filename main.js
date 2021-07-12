@@ -54,6 +54,19 @@ function clearInputHe3()
   inputValueHe3.value("");
 }
 
+function mousePressed()
+{
+  if("" === inputValueHe.value())
+  {
+    inputValueHe.value("請輸入日期");
+  }
+
+  if("" === inputValueHe3.value())
+  {
+    inputValueHe3.value("請輸入日期");
+  }
+}
+
 function showImageHe()
 {
   iHe = inputValueHe.value();
