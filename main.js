@@ -15,9 +15,10 @@ function setup()
   textSize(15);
   text("和和聯合日捐紀錄", 23, 21);
 
-  inputValueHe = createInput();
+  inputValueHe = createInput("請輸入日期");
   inputValueHe.size(90);
   inputValueHe.position(30,40);
+  inputValueHe.mouseClicked(clearInputHe);
 
   showImageButtonHe = createButton("顯示圖片");
   showImageButtonHe.mouseClicked(showImageHe);
@@ -26,9 +27,10 @@ function setup()
   textSize(15);
   text("和和3館日捐紀錄", 853, 21);
 
-  inputValueHe3 = createInput();
+  inputValueHe3 = createInput("請輸入日期");
   inputValueHe3.size(90);
   inputValueHe3.position(860,40);
+  inputValueHe3.mouseClicked(clearInputHe3);
 
   showImageButtonHe3 = createButton("顯示圖片");
   showImageButtonHe3.mouseClicked(showImageHe3);
@@ -42,6 +44,16 @@ function draw()
 
 }
 
+function clearInputHe()
+{
+  inputValueHe.value("");
+}
+
+function clearInputHe3()
+{
+  inputValueHe3.value("");
+}
+
 function showImageHe()
 {
   iHe = inputValueHe.value();
@@ -53,7 +65,7 @@ function showImageHe()
   closeButtonHe[numberHe].mouseClicked(closeImageHe);
   closeButtonHe[numberHe].position(780, 830 + 760*numberHe);
 
-  inputValueHe.value("");
+  inputValueHe.value("請輸入日期");
 
   numberHe++;
 };
@@ -93,7 +105,7 @@ function showImageHe3()
   closeButtonHe3[numberHe3].mouseClicked(closeImageHe3);
   closeButtonHe3[numberHe3].position(1610, 830 + 760*numberHe3);
 
-  inputValueHe3.value("");
+  inputValueHe3.value("請輸入日期");
 
   numberHe3++;
 };
