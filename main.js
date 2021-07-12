@@ -10,7 +10,7 @@ var closeButtonHe3 = [];
 
 function setup()
 {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1200, 50);
 
   textSize(15);
   text("和和聯合日捐紀錄", 23, 21);
@@ -37,6 +37,10 @@ function setup()
   showImageButtonHe3.position(860, 70);
 
   createP("");
+
+  var welcomeMessage = "歡迎來到和和聯合診所日捐紀錄資料區～\r\n本網頁資料紀錄從20210506開始\r\n請在輸入框內輸入日期，並按下「顯示圖片」按鈕，即可顯示紀錄\r\n若要關閉圖片，可按圖片右下角的「X」\r\n日期輸入格式為「YYYYMMDD」，如：20210709\r\n自20210710後，若有合併計算日，則輸入格式為「YYYYMMDD–MMDD」，如：20210710–0711\r\n";
+
+  alert(welcomeMessage);
 }
 
 function draw()
