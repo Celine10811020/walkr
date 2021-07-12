@@ -84,7 +84,7 @@ function showImageHe()
   inputValueHe.value("請輸入日期");
 
   numberHe++;
-};
+}
 
 function closeImageHe()
 {
@@ -124,7 +124,7 @@ function showImageHe3()
   inputValueHe3.value("請輸入日期");
 
   numberHe3++;
-};
+}
 
 function closeImageHe3()
 {
