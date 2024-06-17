@@ -6,7 +6,7 @@ function showImages() {
 
   if(selection == "1")
   {
-    if(inputDate >= 20240506) //update
+    if(parseInt(inputDate) >= parseInt(20240506)) //update
     {
       url = 'https://celine10811020.github.io/walkr/hoho.json';
     }else
@@ -16,7 +16,7 @@ function showImages() {
 
   }else if(selection == "2")
   {
-    if(inputDate >= 20240506) //update
+    if(parseInt(inputDate) >= parseInt(20240506)) //update
     {
       url = 'https://celine10811020.github.io/walkr/hoho3.json';
     }else
