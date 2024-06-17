@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-
-<html lang="en">
-
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/p5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/addons/p5.dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.9/addons/p5.sound.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 
-    <link href="style.css" rel="stylesheet" type="text/css">
-
-    <script src="main.js"></script>
-
-    <title>Walkr</title>
+  <title>Walkr能量捐贈查詢</title>
 </head>
 
 <body>
+  <div class="container">
+    <h1>Walkr能量捐贈查詢</h1>
+    <div class="select-container">
+      <select name="select" id="selectLab">
+        <option value="0" selected>實驗室</option>
+        <option value="1">和和聯合</option>
+        <option value="2">和和3館</option>
+      </select>
+    </div>
+    <input id="inputDate" placeholder="YYYYMMDD">
+    <button onclick="showImages()">查詢</button>
+    <div id="imageContainer"></div>
+  </div>
 </body>
+
+<script src="main.js"></script>
 
 </html>
