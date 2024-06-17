@@ -66,3 +66,7 @@ document.getElementById("inputDate").addEventListener("keyup", function(e) {
     showImages();
   }
 });
+
+document.getElementById("inputDate").onclick = function() {
+  document.getElementById('inputDate').value = "";
+};
