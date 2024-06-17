@@ -23,14 +23,11 @@ function showImages() {
     {
       url = 'https://celine10811020.github.io/walkr/hoho3_history.json';
     }
-
   }else
   {
     imageContainer.innerHTML = '<p>請選擇實驗室。</p>';
     return;
   }
-
-console.log(selection);
 
   if(inputDate == "")
   {
