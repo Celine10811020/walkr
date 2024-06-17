@@ -1,3 +1,7 @@
+window.onload = function() {
+  alert("歡迎來到和和聯合診所日捐紀錄資料區～\r\n本網頁資料紀錄從20210506開始。\r\n請先選擇欲查詢之實驗室，並輸入日期後，並按下「查詢」按鈕，即可顯示紀錄。\r\n若要關閉圖片，可按圖片右上角的「X」。");
+};
+
 function showImages() {
   const inputDate = document.getElementById('inputDate').value;
   const imageContainer = document.getElementById('imageContainer');
