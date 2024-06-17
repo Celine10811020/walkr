@@ -6,10 +6,10 @@ function showImages() {
 
   if(selection == "1")
   {
-    url = 'https://celine10811020.github.io/test01/hoho.json';
+    url = 'https://celine10811020.github.io/walkr/hoho.json';
   }else if(selection == "2")
   {
-    url = 'https://celine10811020.github.io/test01/hoho3.json';
+    url = 'https://celine10811020.github.io/walkr/hoho3.json';
   }else
   {
     imageContainer.innerHTML = '<p>請選擇實驗室。</p>';
