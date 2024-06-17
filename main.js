@@ -6,10 +6,24 @@ function showImages() {
 
   if(selection == "1")
   {
-    url = 'https://celine10811020.github.io/walkr/hoho.json';
+    if(inputDate >= 20210501) //update
+    {
+      url = 'https://celine10811020.github.io/walkr/hoho.json';
+    }else
+    {
+      url = 'https://celine10811020.github.io/walkr/hoho_history.json';
+    }
+
   }else if(selection == "2")
   {
-    url = 'https://celine10811020.github.io/walkr/hoho3.json';
+    if(inputDate >= 20210501) //update
+    {
+      url = 'https://celine10811020.github.io/walkr/hoho3.json';
+    }else
+    {
+      url = 'https://celine10811020.github.io/walkr/hoho3_history.json';
+    }
+
   }else
   {
     imageContainer.innerHTML = '<p>請選擇實驗室。</p>';
@@ -24,7 +38,6 @@ console.log(selection);
     return;
   }
 
-  // Fetch images data from JSON file (or you can hardcode it in JS if preferred)
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -32,12 +45,13 @@ console.log(selection);
         return parseInt(inputDate) >= parseInt(image.start) && parseInt(inputDate) <= parseInt(image.end);
       });
 
-      if (selectedImage) {
+      if(selectedImage)
+      {
         const imagePath = selectedImage.path;
         const imageElement = document.createElement('img');
         imageElement.onload = function() {
-          const containerHeight = imageElement.height; // 取得圖片的實際高度
-          imageContainer.style.height = containerHeight + 'px'; // 設置容器高度為圖片高度
+          const containerHeight = imageElement.height;
+          imageContainer.style.height = containerHeight + 'px';
         };
         imageElement.src = imagePath;
 
@@ -51,7 +65,8 @@ console.log(selection);
         imageContainer.innerHTML = ''; // Clear previous images
         imageContainer.appendChild(imageElement);
         imageContainer.appendChild(closeButton);
-      } else {
+      }else
+      {
         imageContainer.innerHTML = '<p>找不到符合日期範圍的結果。<br>請檢查輸入格式是否錯誤。</p>';
       }
     })
