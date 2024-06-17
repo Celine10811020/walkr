@@ -2,33 +2,26 @@ import os
 import json
 import re
 
-# Define the path to the hoho folder and JSON file
 hoho3_path = 'hoho'
 json_file_path = 'hoho.json'
 
-# List all files in the hoho folder
 files = os.listdir(hoho3_path)
 
-# Filter for files that match the pattern 和和3-YYYYMMDD.jpg, 和和3-YYYYMMDD-MMDD.jpg, 和和3-YYYYMMDD-YYYYMMDD.jpg
 filtered_files = [f for f in files if f.startswith('診所') and f.endswith('.jpg')]
 
-# Initialize an empty list to hold the JSON data
 json_data = []
 
-# Define regex patterns for each filename format
 patterns = [
-    r'診所-(\d{8})\.jpg',  # 和和3-YYYYMMDD.jpg
-    r'診所-(\d{8})-(\d{4})\.jpg',  # 和和3-YYYYMMDD-MMDD.jpg
-    r'診所-(\d{8})-(\d{8})\.jpg'  # 和和3-YYYYMMDD-YYYYMMDD.jpg
+    r'診所(\d{8})\.jpg',
+    r'診所(\d{8})-(\d{4})\.jpg',
+    r'診所(\d{8})-(\d{8})\.jpg'
 ]
 
-# Iterate over the filtered files and extract the necessary information
 for file_name in filtered_files:
     path = os.path.join(hoho3_path, file_name)
     start_date = None
     end_date = None
 
-    # Check which pattern the filename matches
     for pattern in patterns:
         match = re.match(pattern, file_name)
         if match:
@@ -44,16 +37,13 @@ for file_name in filtered_files:
             break
 
     if start_date and end_date:
-        # Create a dictionary with the extracted data
         file_data = {
             'path': path,
             'start': start_date,
             'end': end_date
         }
-        # Append the dictionary to the JSON data list
         json_data.append(file_data)
 
-# Write the JSON data to the file
 with open(json_file_path, 'w', encoding='utf-8') as json_file:
     json.dump(json_data, json_file, ensure_ascii=False, indent=2)
 
