@@ -1,8 +1,13 @@
 name: Update hoho3 JSON
 
 on:
-  schedule:
-    - cron: '0 19 * * *' #UTC19 臺灣凌晨3點更新
+  push:
+    paths:
+      - 'hoho/和和3-*.jpg'
+
+#on:
+#  schedule:
+#    - cron: '0 19 * * *' #UTC19 臺灣凌晨3點更新
 
 jobs:
   update-hoho3-json:
