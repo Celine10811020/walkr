@@ -106,7 +106,7 @@ button:hover{
   border-radius: 8px;
   width: 90vw;
   position: relative;
-  bottom: 0;
+  bottom: 5px;
 }
 #information p{
   margin: 0;
