@@ -2,23 +2,24 @@ import os
 import json
 import re
 
-hoho3_path = 'hoho'
+hoho_path = 'hoho'
 json_file_path = 'hoho.json'
 
-files = os.listdir(hoho3_path)
+files = os.listdir(hoho_path)
 
-filtered_files = [f for f in files if f.startswith('診所') and f.endswith('.jpg')]
+# Regular expression to match filenames with various image extensions
+filtered_files = [f for f in files if re.match(r'^診所\d{8}(-\d{4,8})?\.(jpg|jpeg|png)$', f, re.IGNORECASE)]
 
 json_data = []
 
 patterns = [
-    r'診所(\d{8})\.jpg',
-    r'診所(\d{8})-(\d{4})\.jpg',
-    r'診所(\d{8})-(\d{8})\.jpg'
+    r'診所(\d{8})\.\w+',
+    r'診所(\d{8})-(\d{4})\.\w+',
+    r'診所(\d{8})-(\d{8})\.\w+'
 ]
 
 for file_name in filtered_files:
-    path = os.path.join(hoho3_path, file_name)
+    path = os.path.join(hoho_path, file_name)
     start_date = None
     end_date = None
 

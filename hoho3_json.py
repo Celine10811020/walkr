@@ -7,14 +7,15 @@ json_file_path = 'hoho3.json'
 
 files = os.listdir(hoho3_path)
 
-filtered_files = [f for f in files if f.startswith('和和3-') and f.endswith('.jpg')]
+# Regular expression to match filenames with various image extensions
+filtered_files = [f for f in files if re.match(r'^和和3-\d{8}(-\d{4,8})?\.(jpg|jpeg|png)$', f, re.IGNORECASE)]
 
 json_data = []
 
 patterns = [
-    r'和和3-(\d{8})\.jpg', 
-    r'和和3-(\d{8})-(\d{4})\.jpg', 
-    r'和和3-(\d{8})-(\d{8})\.jpg' 
+    r'和和3-(\d{8})\.\w+',
+    r'和和3-(\d{8})-(\d{4})\.\w+',
+    r'和和3-(\d{8})-(\d{8})\.\w+'
 ]
 
 for file_name in filtered_files:
