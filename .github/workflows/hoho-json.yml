@@ -1,9 +1,8 @@
 name: Update hoho JSON
 
 on:
-  push:
-    paths:
-      - 'hoho/診所*.jpg'
+  schedule:
+    - cron: '0 3 * * *' #UTC19 臺灣凌晨3點更新
 
 jobs:
   update-hoho-json:
