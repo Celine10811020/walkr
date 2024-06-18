@@ -3,7 +3,7 @@ name: Update hoho3 JSON
 on:
   push:
     paths:
-      - 'hoho/和和3-*.jpg'
+      - 'hoho/和和3-*.{jpg,jpeg,png,gif,bmp}'
 
 #on:
 #  schedule:
