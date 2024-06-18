@@ -2,7 +2,7 @@ name: Update hoho JSON
 
 on:
   schedule:
-    - cron: '0 3 * * *' #UTC19 臺灣凌晨3點更新
+    - cron: '0 19 * * *' #UTC19 臺灣凌晨3點更新
 
 jobs:
   update-hoho-json:
