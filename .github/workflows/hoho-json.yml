@@ -3,7 +3,8 @@ name: Update hoho JSON
 on:
   push:
     paths:
-      - 'hoho/診所*.{jpg,jpeg,png,gif,bmp}'
+      - 'hoho/診所*.jpg'
+#      - 'hoho/診所*.{jpg,jpeg,png,gif,bmp}'
 
 #on:
 #  schedule:
