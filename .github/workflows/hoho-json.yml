@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - 'hoho/診所*.jpg'
+      - 'hoho/診所*.jpeg'
+      - 'hoho/診所*.png'
 #      - 'hoho/診所*.{jpg,jpeg,png,gif,bmp}'
 
 #on:
