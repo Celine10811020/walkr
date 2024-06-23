@@ -3,9 +3,9 @@ name: Update hoho3 JSON
 on:
   push:
     paths:
-      - 'hoho/和和3-*.jpg'
-      - 'hoho/和和3-*.jpeg'
-      - 'hoho/和和3-*.png'
+      - 'hoho3/和和3-*.jpg'
+      - 'hoho3/和和3-*.jpeg'
+      - 'hoho3/和和3-*.png'
 
 #on:
 #  schedule:
